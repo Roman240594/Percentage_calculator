@@ -11,13 +11,14 @@
 
 <body>
     <h1>Відсотковий калькулятор</h1>
-    <form>
+    <form onkeydown="if (event.keyCode === 13) { event.preventDefault(); calculatePercentage(); }">
         <label for="number">Введіть число:</label>
         <input type="number" id="number" name="number"><br><br>
         <label for="percentage">Введіть відсоток:</label>
         <input type="number" id="percentage" name="percentage"><br><br>
-        <input type="button" value="Розрахувати">
+        <input type="button" value="Розрахувати" onclick="calculatePercentage()">
     </form>
+    <p id="result"></p>
     <script src="main.js"></script>
 </body>
 
